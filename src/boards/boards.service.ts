@@ -21,6 +21,10 @@ export class BoardsService {
 		return found;
 	}
 
+	async createBoard(createBoardDto: CreateBoardDto): Promise<Board> {
+		return this.boardRepository.createBoard(createBoardDto);
+	}
+
 	// getAllBoards(): Board[] {
 	// 	return this.boards;
 	// }

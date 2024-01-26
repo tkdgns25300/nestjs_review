@@ -6,10 +6,6 @@ import { TypeOrmExModule } from "./database/typeorm-ex.module";
 import { BoardRepository } from "./boards/board.repository";
 
 @Module({
-	imports: [
-		TypeOrmModule.forRoot(typeORMConfig),
-		BoardsModule,
-		TypeOrmExModule.forCustomRepository([BoardRepository]),
-	],
+	imports: [TypeOrmModule.forRoot(typeORMConfig), BoardsModule],
 })
 export class AppModule {}
